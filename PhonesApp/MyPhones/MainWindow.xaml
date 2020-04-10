@@ -1,0 +1,23 @@
+﻿<Window x:Class="MyPhones.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyPhones"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="490">
+    <Grid>
+    <GroupBox
+        Header="My Phone"
+      FontSize="30"
+      Height="150"
+      Width="440">
+      <ComboBox
+        x:Name="CbPhone"
+        Height="50"
+        Width="420"
+        SelectionChanged="CbPhone_SelectionChanged">
+      </ComboBox>
+     </GroupBox>
+    </Grid>
+</Window>

@@ -1,0 +1,82 @@
+﻿<Window x:Class="Plants.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Plants"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1000">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="200"/>
+      <ColumnDefinition Width="300"/>
+      <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+    <Label Content="Your Favorite Plants"
+           FontSize="30"
+           Grid.ColumnSpan="3"
+           HorizontalAlignment="Center"
+           VerticalAlignment="Center"/>
+    <Label Content="Name:"
+           FontSize="30"
+           Grid.Row="1"
+           HorizontalAlignment="Right"
+           VerticalAlignment="Center"/>
+    <Label Content="Environment:"
+           FontSize="30"
+           Grid.Row="2"
+           HorizontalAlignment="Right"
+           VerticalAlignment="Center"/>
+    <Label Content="Type:"
+           FontSize="30"
+           Grid.Row="3"
+           HorizontalAlignment="Right"
+           VerticalAlignment="Center"/>
+    <Button Content="Add Plant"
+            x:Name="BtnAddPlant"
+            Grid.Row="4"
+            Grid.ColumnSpan="2"
+            FontSize="30"
+            Margin="20,20,0,20"
+            Click="BtnAddPlant_Click"/>
+    <Button Content="Show Details"
+            x:Name="BtnShowDetails"
+            Grid.Row="4"
+            Grid.Column="2"
+            FontSize="30"
+            Margin="20"
+            Click="BtnShowDetails_Click"/>
+    <TextBox x:Name="TxtBoxName"
+             VerticalAlignment="Center"
+             Grid.Row="1"
+             Grid.Column="1"
+             FontSize="30"/>
+    <ComboBox x:Name="CbEnvironment"
+              Grid.Row="2"
+              Grid.Column="1"
+              Margin="0,20"
+              FontSize="30"/>
+    <ComboBox x:Name="CbType"
+              Grid.Row="3"
+              Grid.Column="1"
+              FontSize="30"
+              Margin="0,20"/>
+    <GroupBox Header="All Plants"
+              Grid.Row="1"
+              Grid.Column="2"
+              Grid.RowSpan="3"
+              FontSize="30"
+              Margin="20,0">
+      <ListBox x:Name="LstBoxPlants"
+               FontSize="30"
+               Margin="10"/>
+    </GroupBox>
+  </Grid>
+</Window>
